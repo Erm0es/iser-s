@@ -1,10 +1,14 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
 
 export default function App() {
+   const location = useLocation();
   return (
     <>
       <Header />
+      {location.pathname === "/" && <Hero />}
+
       <main>
         <Routes>
           <Route path="/" element={<div>Hem</div>} />
