@@ -1,0 +1,77 @@
+@import "../../styles/variables.css";
+
+/* ===== FOOTER ===== */
+.footer {
+  position: relative;
+  background-color: var(--skiffer);
+  color: var(--bjork);
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--glod);
+}
+
+/* ===== Innehåll ===== */
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-l);
+  padding: 0 var(--space-m);
+}
+
+.footer__info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--glod);
+  margin-bottom: 0.5rem;
+}
+
+.footer__info p {
+  max-width: 300px;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+}
+
+.footer__contact h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--glod);
+  margin-bottom: 0.5rem;
+}
+
+.footer__contact p {
+  margin: 0.2rem 0;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+}
+
+/* ===== Bottenrad ===== */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  margin-top: var(--space-l);
+  padding-top: var(--space-s);
+  font-size: 0.85rem;
+  color: var(--bjork);
+}
+
+/* ===== Mobil ===== */
+@media (max-width: 768px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-m);
+  }
+}

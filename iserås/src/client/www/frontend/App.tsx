@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
    const location = useLocation();
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/kontakt" element={<div>Kontakt</div>} />
         </Routes>
       </main>
+      <Footer/>
     </>
   );
 }
