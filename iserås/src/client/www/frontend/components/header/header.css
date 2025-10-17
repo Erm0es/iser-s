@@ -10,7 +10,7 @@
   color: var(--bjork);
   transition: box-shadow 0.2s ease, background-color 0.3s ease;
   border-bottom: 2px solid var(--mossa);
-  margin: 0;    
+  margin: 0;
   padding: 0;
 }
 
@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-m);
-  height: 80px; 
+  height: 80px;
 }
 
 /* === Logotyp === */
@@ -37,7 +37,7 @@
   color: var(--bjork);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.20rem; 
+  font-size: 1.20rem;
   letter-spacing: 0.5px;
 }
 
@@ -59,7 +59,7 @@
 .nav a {
   text-decoration: none;
   font-family: var(--font-main);
-  font-weight: 550; 
+  font-weight: 550;
   color: var(--bjork);
   transition: color 0.2s ease;
   font-size: 0.95rem;
@@ -71,8 +71,8 @@
 }
 
 .nav__cta {
-  background-color: var(--glod);      
-  color: var(--bjork);              
+  background-color: var(--glod);
+  color: var(--bjork);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   font-family: var(--font-main);
@@ -82,7 +82,7 @@
 }
 
 .nav__cta:hover {
-  background-color: var(--bjork);  
+  background-color: var(--bjork);
   transform: translateY(-1px);
 }
 
@@ -126,13 +126,23 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
+  .nav a {
+    color: var(--mossa);
+  }
+
   .nav--open {
     display: flex;
   }
 
   .nav__cta {
-    width: 100%;
+    width: 20%;
+    color: var(--bjork)!important;
     text-align: center;
     margin-top: var(--space-s);
+  }
+
+  .nav__cta:hover {
+    background-color: var(--glod-dark);
+    transform: translateY(-1px);
   }
 }
