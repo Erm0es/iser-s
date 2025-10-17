@@ -1,0 +1,138 @@
+@import "../../styles/variables.css";
+
+/* ====== HEADER ====== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--mossa);
+  color: var(--bjork);
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+  border-bottom: 2px solid var(--mossa);
+  margin: 0;    
+  padding: 0;
+}
+
+.header--shadow {
+  box-shadow: var(--shadow-soft);
+}
+
+/* === Inre layout === */
+.header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-m);
+  height: 80px; 
+}
+
+/* === Logotyp === */
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--bjork);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.20rem; 
+  letter-spacing: 0.5px;
+}
+
+.header__logo-mark {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bjork);
+  border-radius: 4px;
+  margin-right: 0.75rem;
+}
+
+/* === Navigation (desktop) === */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-weight: 550; 
+  color: var(--bjork);
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--glod);
+}
+
+.nav__cta {
+  background-color: var(--glod);      
+  color: var(--bjork);              
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.nav__cta:hover {
+  background-color: var(--bjork);  
+  transform: translateY(-1px);
+}
+
+/* === Mobilmeny-knapp === */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  height: 2px;
+  background-color: var(--bjork);
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+/* === Mobilmeny === */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: var(--bjork);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-m);
+    gap: var(--space-s);
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__cta {
+    width: 100%;
+    text-align: center;
+    margin-top: var(--space-s);
+  }
+}

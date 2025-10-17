@@ -1,0 +1,26 @@
+:root {
+  /* Färger */
+  --bjork: #f0e0d0;
+  --mossa: #475c3f;
+  --glod: #D97706;
+  --skiffer: #2f2f2f;
+  --bjork-light: #faf7f3;
+  --mossa-dark: #3f5240;
+  
+
+  /* Typografi */
+  --font-main: "Inter", sans-serif;
+  --font-heading: "Merriweather", serif;
+
+  /* Avstånd & storlek */
+  --radius: 6px;
+  --max-width: 1100px;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
+
+  /* Skuggor */
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
