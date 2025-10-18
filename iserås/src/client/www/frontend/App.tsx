@@ -1,7 +1,9 @@
 import { Routes, Route, useLocation } from "react-router-dom";
+
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Footer from "./components/footer/Footer";
+import ServicesSection from "./components/servicesSection/ServicesSection";
 
 export default function App() {
    const location = useLocation();
@@ -9,6 +11,7 @@ export default function App() {
     <>
       <Header />
       {location.pathname === "/" && <Hero />}
+      {location.pathname === "/" && <ServicesSection/>}
 
       <main>
         <Routes>
