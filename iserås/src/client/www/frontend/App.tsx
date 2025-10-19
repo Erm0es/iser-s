@@ -5,6 +5,7 @@ import Hero from "./components/hero/Hero";
 import Footer from "./components/footer/Footer";
 import ServicesSection from "./components/servicesSection/ServicesSection";
 import AboutSection from "./components/aboutSection/AboutSection";
+import GallerySection from "./components/gallerySection/GallerySection";
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
        <Hero />
        <ServicesSection/>
        <AboutSection/>
+       <GallerySection />
        </>
 
       )}
