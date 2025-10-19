@@ -4,14 +4,23 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Footer from "./components/footer/Footer";
 import ServicesSection from "./components/servicesSection/ServicesSection";
+import AboutSection from "./components/aboutSection/AboutSection";
+
 
 export default function App() {
    const location = useLocation();
   return (
     <>
       <Header />
-      {location.pathname === "/" && <Hero />}
-      {location.pathname === "/" && <ServicesSection/>}
+      {location.pathname === "/" && (
+       <>
+       <Hero />
+       <ServicesSection/>
+       <AboutSection/>
+       </>
+
+      )}
+
 
       <main>
         <Routes>

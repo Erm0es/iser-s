@@ -17,7 +17,7 @@ export default function Header() {
       <div className="header__inner">
         <Link to="/" className="header__logo">
           <div className="header__logo-mark" />
-          <span>Iserås Skorsten & Kamin</span>
+          <span>Iserås Kamin & Skorsten</span>
         </Link>
 
         <nav className={`nav ${open ? "nav--open" : ""}`}>
