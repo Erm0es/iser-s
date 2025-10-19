@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 import ServicesSection from "./components/servicesSection/ServicesSection";
 import AboutSection from "./components/aboutSection/AboutSection";
 import GallerySection from "./components/gallerySection/GallerySection";
-
+import ContactCTA from "./components/contactCta/ContactCTA";
 
 export default function App() {
    const location = useLocation();
@@ -19,6 +19,7 @@ export default function App() {
        <ServicesSection/>
        <AboutSection/>
        <GallerySection />
+       <ContactCTA withForm={true} />
        </>
 
       )}
@@ -26,7 +27,7 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<div>Hem</div>} />
+          <Route path="/" element={<div></div>} />
           <Route path="/om-oss" element={<div>Om oss</div>} />
           <Route path="/tjanster" element={<div>Tjänster</div>} />
           <Route path="/galleri" element={<div>Galleri</div>} />

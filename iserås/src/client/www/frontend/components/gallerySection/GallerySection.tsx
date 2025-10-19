@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 //Bilder ligger i arr, kanske byta till db?
 const images = [
   "/images/gallery/img1.jpg",
-  "/images/gallery/img1.jpg",
-  "/images/gallery/img1.jpg",
-  "/images/gallery/img1.jpg",
+  "/images/gallery/img2.jpg",
+  "/images/gallery/img3.jpg",
+  "/images/gallery/img4.jpg",
 ];
 
 export default function GallerySection() {

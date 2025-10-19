@@ -7,14 +7,14 @@ export default function AboutSection() {
         <div className="about__text">
           <h2>Varför välja Iserås Kamin & Skorsten?</h2>
           <p>
-            Vi är ett lokalt familjeföretag med över 20 års erfarenhet av
+            Vi är ett lokalt familjeföretag med över 30 års erfarenhet av
             skorstenar, kaminer och eldstäder. Hos oss får du personlig service,
             gediget hantverk och trygga installationer – från första kontakt
             till färdig brasa.
           </p>
 
           <ul className="about__list">
-            <li> 20+ års erfarenhet</li>
+            <li> 30+ års erfarenhet</li>
             <li> Lokalt familjeföretag</li>
             <li> Auktoriserade installatörer</li>
             <li> Fokus på trygghet och kvalitet</li>
