@@ -1,0 +1,81 @@
+@import "../../styles/variables.css";
+
+.about {
+  background-color: var(--bjork);
+  color: var(--skiffer);
+  padding: var(--space-l) var(--space-m);
+}
+
+.about__content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-l);
+  flex-wrap: wrap;
+}
+
+.about__text {
+  flex: 1 1 400px;
+}
+
+.about__text h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--mossa);
+  margin-bottom: var(--space-m);
+}
+
+.about__text p {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-m);
+}
+
+/* Enkel lista med klassisk punkt */
+.about__list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+
+.about__list li {
+  margin-bottom: 0.5rem;
+  color: var(--skiffer);
+}
+
+.about__image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.about__image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 3px solid var(--glod);
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__list {
+    list-style-position: inside;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .about__image img {
+    max-width: 100%;
+  }
+}

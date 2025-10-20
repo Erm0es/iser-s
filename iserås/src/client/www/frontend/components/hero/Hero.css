@@ -1,0 +1,65 @@
+@import "../../styles/variables.css";
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 70vh;
+  background-image: url("/public/images/hero-eld.png"); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bjork);
+  margin: 0;
+  padding: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.397); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__content {
+  z-index: 1;
+  max-width: 600px;
+  padding: var(--space-l);
+}
+
+.hero__content h1 {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-m);
+  color: var(--bjork);
+}
+
+.hero__content p {
+  font-family: var(--font-main);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-l);
+  color: var(--bjork);
+}
+
+.hero__cta {
+  display: inline-block;
+  background-color: var(--glod);
+  color: var(--bjork);
+  font-family: var(--font-main);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.hero__cta:hover {
+  background-color: var(--mossa);
+  transform: translateY(-2px);
+}

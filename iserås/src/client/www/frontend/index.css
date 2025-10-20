@@ -1,0 +1,12 @@
+/* ===== GLOBAL RESET ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bjork);
+  font-family: var(--font-main);
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}

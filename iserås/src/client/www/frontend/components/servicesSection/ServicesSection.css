@@ -1,0 +1,124 @@
+@import "../../styles/variables.css";
+
+.services {
+  background: var(--bjork);
+}
+
+.services__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 56px) 16px;
+}
+
+.services__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.services__title {
+  font-family: "Merriweather", serif;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.services__subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* === GRID === */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === CARD === */
+.services__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 280px;
+  color: var(--bjork);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: var(--skiffer);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.services__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* === IMAGE === */
+.services__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.services__card:hover .services__image {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+.services__card:hover .services__content {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+
+/* === CONTENT === */
+.services__content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.35);        
+  backdrop-filter: blur(8px);              
+  -webkit-backdrop-filter: blur(8px);  
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 0 0 16px 16px;
+  color: var(--bjork);
+}
+
+/* === TEXT === */
+.services__cardTitle {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  margin: 0 0 0.75rem;
+  color: var(--bjork);
+}
+
+.services__cardText {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin: 0 0 0.75rem;
+  color: color-mix(in srgb, var(--bjork), white 30%);
+}
+
+/* === LINK === */
+.services__link {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--bjork);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.services__link:hover {
+  color: var(--glod);
+}
