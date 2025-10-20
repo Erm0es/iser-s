@@ -15,10 +15,22 @@ export default function Header() {
   return (
     <header className={`header ${elevated ? "header--shadow" : ""}`}>
       <div className="header__inner">
-        <Link to="/" className="header__logo">
-          <div className="header__logo-mark" />
-          <span>Iserås Kamin & Skorsten</span>
-        </Link>
+        {/* 👇 Ny wrapper som staplar logga + partnerlänk */}
+        <div className="header__brand">
+          <Link to="/" className="header__logo">
+            <div className="header__logo-mark" />
+            <span>Iserås Kamin & Skorsten</span>
+          </Link>
+
+          <a
+            href="https://eldabutiken.se/butik/goteborg-centrum"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="header__partner"
+          >
+            i samarbete med <span>Elda</span>
+          </a>
+        </div>
 
         <nav className={`nav ${open ? "nav--open" : ""}`}>
           <NavLink to="/">Hem</NavLink>
