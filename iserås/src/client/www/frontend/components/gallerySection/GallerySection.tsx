@@ -16,7 +16,7 @@ export default function GallerySection() {
         <h2>Inspirationsgalleri</h2>
         <p>
           Ta del av några av våra färdiga installationer – kaminer, skorstenar
-          och eldstäder som sprider värme i hem runt om i Iserås.
+          och eldstäder som sprider värme i hem runt om i västra götaland.
         </p>
 
         <div className="gallery__grid">
