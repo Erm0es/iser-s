@@ -1,5 +1,4 @@
-import React from "react";
-import "./servicesSection.css";
+import "./ServicesSection.css";
 
 type ServiceItem = {
     title: string;
