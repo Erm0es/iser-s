@@ -1,0 +1,194 @@
+@import "../../styles/variables.css";
+
+/* Wrapper */
+.contact {
+    background: var(--bjork);
+    color: var(--skiffer);
+    padding: var(--space-xl) var(--space-m);
+}
+
+.contact__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Header */
+.contact__header {
+    margin-bottom: var(--space-l);
+}
+
+.contact__header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--mossa);
+    margin: 0 0 var(--space-s);
+    line-height: 1.2;
+}
+
+.contact__lead {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0;
+}
+
+/* Kort-grid */
+.contact__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-m);
+    margin-bottom: var(--space-xl);
+}
+
+.card {
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: #fff;
+    /* fallback */
+    border: 1px solid rgba(0, 0, 0, .06);
+    box-shadow: var(--shadow-soft);
+    transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+}
+
+@supports (backdrop-filter: blur(6px)) {
+    .card {
+        background: rgba(255, 255, 255, .6);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, .35);
+    }
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+}
+
+.card h3 {
+    margin: 0 0 .3rem;
+    font-family: var(--font-heading);
+    color: var(--mossa);
+    font-size: 1.15rem;
+}
+
+.card p {
+    margin: 0 0 .9rem;
+}
+
+/* Knappar */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: 700;
+    border-radius: var(--radius);
+    padding: 0.7rem 1.1rem;
+    transition: background-color .2s ease, color .2s ease, transform .1s ease, border-color .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn--primary {
+    background: var(--glod);
+    color: var(--bjork);
+}
+
+.btn--primary:hover {
+    background: var(--skiffer);
+}
+
+.btn--secondary {
+    background: var(--mossa);
+    color: var(--bjork);
+}
+
+.btn--secondary:hover {
+    opacity: .9;
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--mossa);
+    border: 2px solid var(--mossa);
+}
+
+.btn--outline:hover {
+    color: var(--bjork);
+    background: var(--mossa);
+    border-color: var(--mossa);
+}
+
+/* Serviceområde */
+.contact__service {
+    margin-bottom: var(--space-xl);
+}
+
+.contact__service h2 {
+    font-family: var(--font-heading);
+    color: var(--mossa);
+    margin: 0 0 .6rem;
+}
+
+.chips {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 .4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.chips li {
+    background: var(--bjork);
+    border: 1px solid rgba(0, 0, 0, .08);
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    font-size: .9rem;
+}
+
+.muted {
+    opacity: .85;
+    font-size: .95rem;
+}
+
+/* FAQ */
+.contact__faq h2 {
+    font-family: var(--font-heading);
+    color: var(--mossa);
+    margin: 0 0 .6rem;
+}
+
+.contact__faq details {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: .9rem 1rem;
+    margin-bottom: .6rem;
+}
+
+.contact__faq summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact__faq p {
+    margin: .5rem 0 0;
+}
+
+/* Mobiljusteringar */
+@media (max-width: 768px) {
+    .contact__header h1 {
+        font-size: 1.9rem;
+    }
+
+    .contact__lead {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
