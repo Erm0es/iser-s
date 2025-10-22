@@ -8,3 +8,8 @@
   PORT=
   NODE_ENV=
   CONTACT_MAIL=
+
+## Frontend
+* cd iserås/client
+* npm install
+* npm run dev
