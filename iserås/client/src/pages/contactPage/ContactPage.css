@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-/* Kort-grid */
+/* Grid */
 .contact__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -41,38 +41,79 @@
     margin-bottom: var(--space-xl);
 }
 
-.card {
-    padding: var(--space-m);
+/* BAS: kort med bakgrundsbild */
+.contact-card {
+    position: relative;
     border-radius: var(--radius);
-    background: #fff;
-    /* fallback */
-    border: 1px solid rgba(0, 0, 0, .06);
+    overflow: hidden;
+    min-height: 220px;
     box-shadow: var(--shadow-soft);
-    transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+    isolation: isolate;
 }
 
-@supports (backdrop-filter: blur(6px)) {
-    .card {
-        background: rgba(255, 255, 255, .6);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, .35);
+/* Bakgrundsbild */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px) brightness(0.9);
+  transform: scale(1.05); 
+  z-index: -2;
+}
+
+.contact-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.15) 40%,
+            rgba(0, 0, 0, 0.35) 100%);
+    z-index: -1;
+}
+
+/* bakgrunder */
+.call-card::before {
+    background-image: url("/images/contact/call.jpg");
+}
+
+.mail-card::before {
+    background-image: url("/images/contact/mail.jpg");
+}
+
+/* GLAS-OVERLAY för textinnehåll */
+.contact-card__glass {
+    margin: var(--space-m);
+    padding:2.2rem var(--space-m);
+    border-radius: calc(var(--radius) + 2px);
+    background: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    color: var(--skiffer);
+}
+
+/* Fallback om blur inte stöds */
+@supports not (backdrop-filter: blur(10px)) {
+    .contact-card__glass {
+        background: rgba(255, 255, 255, 0.753);
+        border-color: rgba(0, 0, 0, 0.06);
     }
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
-}
-
-.card h3 {
+/* Typografi */
+.contact-card__glass h3 {
     margin: 0 0 .3rem;
     font-family: var(--font-heading);
     color: var(--mossa);
     font-size: 1.15rem;
 }
 
-.card p {
+.contact-card__glass p {
     margin: 0 0 .9rem;
+    font-family: var(--font-main);
 }
 
 /* Knappar */
@@ -86,9 +127,6 @@
     transition: background-color .2s ease, color .2s ease, transform .1s ease, border-color .2s ease;
 }
 
-.btn:hover {
-    transform: translateY(-1px);
-}
 
 .btn--primary {
     background: var(--glod);
@@ -96,7 +134,7 @@
 }
 
 .btn--primary:hover {
-    background: var(--skiffer);
+    background: var(--mossa);
 }
 
 .btn--secondary {
@@ -105,20 +143,9 @@
 }
 
 .btn--secondary:hover {
-    opacity: .9;
+    background: var(--glod);
 }
 
-.btn--outline {
-    background: transparent;
-    color: var(--mossa);
-    border: 2px solid var(--mossa);
-}
-
-.btn--outline:hover {
-    color: var(--bjork);
-    background: var(--mossa);
-    border-color: var(--mossa);
-}
 
 /* Serviceområde */
 .contact__service {
@@ -134,6 +161,24 @@
 .muted {
     opacity: .85;
     font-size: .95rem;
+}
+
+.contact__partner {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  color: var(--skiffer);
+}
+
+.contact__partner a {
+  color: var(--glod);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact__partner a:hover {
+  color: var(--mossa);
+  text-decoration: underline;
 }
 
 /* FAQ */
@@ -171,7 +216,19 @@
     }
 
     .btn {
-        width: 100%;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card__glass {
+        margin: var(--space-s);
+        padding: var(--space-m);
+    }
+
+    .btn {
+        width: 50%;
         text-align: center;
     }
 }

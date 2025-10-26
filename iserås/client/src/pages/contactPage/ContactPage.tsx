@@ -4,7 +4,7 @@ export default function ContactPage() {
   return (
     <section className="contact" aria-labelledby="contact-title">
       <div className="contact__inner">
-        
+
         {/* Sektionstitel + intro */}
         <header className="contact__header">
           <h1 id="contact-title">Kontakta oss</h1>
@@ -16,20 +16,22 @@ export default function ContactPage() {
 
         {/* Kort-grid med CTA */}
         <section className="contact__cards" aria-label="Kontaktvägar">
-          <article className="card">
-            <h3>Ring oss</h3>
-            <p>Snabbast svar vardagar 08–17.</p>
-            <a className="btn btn--primary" href="tel:+4670XXXXXXX">
-              070-XXX XX XX
-            </a>
+          {/* CALL */}
+          <article className="contact-card call-card">
+            <div className="contact-card__glass">
+              <h3>Ring oss</h3>
+              <p>För snabbast svar skicka ett <strong>sms.</strong></p>
+              <a className="btn btn--primary" href="tel:+46707444467">0707-44 44 67</a>
+            </div>
           </article>
 
-          <article className="card">
-            <h3>Mejla oss</h3>
-            <p>Vi svarar normalt inom 24 timmar.</p>
-            <a className="btn btn--secondary" href="mailto:info@eldstad.nu">
-              info@eldstad.nu
-            </a>
+          {/* MAIL */}
+          <article className="contact-card mail-card">
+            <div className="contact-card__glass">
+              <h3>Mejla oss</h3>
+              <p>Vi svarar normalt inom 24 timmar.</p>
+              <a className="btn btn--secondary" href="mailto:info@eldstad.nu">info@eldstad.nu</a>
+            </div>
           </article>
         </section>
 
@@ -38,6 +40,15 @@ export default function ContactPage() {
           <h2>Vi kommer till dig i Västra Götaland!</h2>
           <p className="muted">
             Vi utgår från Göteborg stad. Offert och tid enligt överenskommelse.
+          </p>
+          <p className="contact__partner">
+            <a
+              href="https://eldabutiken.se/butik/goteborg-centrum/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             I sammarbete med Elda 🔥
+            </a>
           </p>
         </section>
 
