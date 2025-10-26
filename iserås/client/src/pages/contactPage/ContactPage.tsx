@@ -47,7 +47,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-             I sammarbete med Elda 🔥
+             I samarbete med Elda 🔥
             </a>
           </p>
         </section>
