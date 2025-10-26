@@ -131,23 +131,6 @@
     margin: 0 0 .6rem;
 }
 
-.chips {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 .4rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-}
-
-.chips li {
-    background: var(--bjork);
-    border: 1px solid rgba(0, 0, 0, .08);
-    padding: .35rem .6rem;
-    border-radius: 999px;
-    font-size: .9rem;
-}
-
 .muted {
     opacity: .85;
     font-size: .95rem;

@@ -35,12 +35,7 @@ export default function ContactPage() {
 
         {/* Serviceområde */}
         <section className="contact__service" aria-label="Serviceområde">
-          <h2>Vi kommer till dig i Västra Götaland</h2>
-          <ul className="chips">
-            <li>Göteborg</li>
-            <li>Kungälv</li>
-            <li>Uddevalla</li>
-          </ul>
+          <h2>Vi kommer till dig i Västra Götaland!</h2>
           <p className="muted">
             Vi utgår från Göteborg stad. Offert och tid enligt överenskommelse.
           </p>
