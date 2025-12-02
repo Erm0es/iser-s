@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/om-oss" element={<div>Om oss</div>} />
           <Route path="/tjanster" element={<div>Tjänster</div>} />
           <Route path="/galleri" element={<div>Galleri</div>} />
-          <Route path="/kontakt" element={<div>Kontakt</div>} />
+          <Route path="/kontakt" element={<ContactCTA withForm={true} />} />
         </Routes>
       </main>
       <Footer/>

@@ -17,6 +17,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.9.0",
+    "@types/nodemailer": "^7.0.4",
     "dotenv": "^17.2.3",
     "eslint": "^9.38.0",
     "express": "^5.1.0",
@@ -28,6 +29,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "nodemailer": "^7.0.11"
   }
 }
