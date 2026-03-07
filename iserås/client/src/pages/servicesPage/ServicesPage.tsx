@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import "./servicesPage.css";
 
 const services = [
@@ -106,9 +107,9 @@ export default function ServicesPage() {
                                     ))}
                                 </ul>
 
-                                <a href="/kontakt" className="servicesPage__linkButton">
+                                <Link to ="/kontakt" className="servicesPage__linkButton">
                                     Kontakta oss
-                                </a>
+                                </Link>
                             </div>
                         </article>
                     ))}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 export default function Hero() {
@@ -9,9 +10,9 @@ export default function Hero() {
           <p>
             Vi hjälper dig skapa värme i hemmet — säkert, snyggt och hållbart.
           </p>
-          <a href="/kontakt" className="hero__cta">
+          <Link to="/kontakt" className="hero__cta">
             Boka kostnadsfritt hembesök
-          </a>
+          </Link>
         </div>
       </div>
     </section>

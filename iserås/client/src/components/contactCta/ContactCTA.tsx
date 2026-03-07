@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ContactCTA.css";
 
 type ContactCTAProps = {
@@ -13,7 +14,7 @@ export default function ContactCTA({ withForm = false }: ContactCTAProps) {
           <p>Hör av dig så hjälper vi dig med kamin och skorsten — tryggt och smidigt.</p>
 
           <div className="contact-cta__actions">
-            <a href="/kontakt" className="contact-cta__button">Kontakta oss</a>
+            <Link to="/kontakt" className="contact-cta__button">Kontakta oss</Link>
 
             <ul className="contact-cta__info">
               <li><a href="tel:+46707444467">0707-444467</a></li>

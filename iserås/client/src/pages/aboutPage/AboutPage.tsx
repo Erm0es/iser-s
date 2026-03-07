@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import "./AboutPage.css";
 
 export default function AboutPage() {
@@ -99,9 +100,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <a href="/kontakt" className="about__button">
+          <Link to="/kontakt" className="about__button">
             Kontakta oss
-          </a>
+          </Link>
         </div>
       </section>
     </main>
