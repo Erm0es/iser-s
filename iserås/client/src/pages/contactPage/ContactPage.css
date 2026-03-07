@@ -1,54 +1,61 @@
 @import "../../styles/variables.css";
 
 /* Wrapper */
+.contact,
+.contact *,
+.contact *::before,
+.contact *::after {
+  box-sizing: border-box;
+}
+
 .contact {
-    background: var(--bjork);
-    color: var(--skiffer);
-    padding: var(--space-xl) var(--space-m);
+  background: var(--bjork);
+  color: var(--skiffer);
+  padding: var(--space-xl) var(--space-m);
 }
 
 .contact__inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 /* Header */
 .contact__header {
-    margin-bottom: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 
 .contact__header h1 {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    color: var(--mossa);
-    margin: 0 0 var(--space-s);
-    line-height: 1.2;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--mossa);
+  margin: 0 0 var(--space-s);
+  line-height: 1.2;
 }
 
 .contact__lead {
-    font-family: var(--font-main);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    max-width: 720px;
-    margin: 0;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0;
 }
 
 /* Grid */
 .contact__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--space-m);
-    margin-bottom: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-m);
+  margin-bottom: var(--space-xl);
 }
 
-/* BAS: kort med bakgrundsbild */
+/* Kort med bakgrundsbild */
 .contact-card {
-    position: relative;
-    border-radius: var(--radius);
-    overflow: hidden;
-    min-height: 220px;
-    box-shadow: var(--shadow-soft);
-    isolation: isolate;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 220px;
+  box-shadow: var(--shadow-soft);
+  isolation: isolate;
 }
 
 /* Bakgrundsbild */
@@ -59,108 +66,118 @@
   background-size: cover;
   background-position: center;
   filter: blur(2px) brightness(0.9);
-  transform: scale(1.05); 
+  transform: scale(1.05);
   z-index: -2;
 }
 
 .contact-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.25) 0%,
-            rgba(0, 0, 0, 0.15) 40%,
-            rgba(0, 0, 0, 0.35) 100%);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: -1;
 }
 
-/* bakgrunder */
+/* Bakgrunder */
 .call-card::before {
-    background-image: url("/images/contact/call.jpg");
+  background-image: url("/images/contact/call.jpg");
 }
 
 .mail-card::before {
-    background-image: url("/images/contact/mail.jpg");
+  background-image: url("/images/contact/mail.jpg");
 }
 
-/* GLAS-OVERLAY för textinnehåll */
+/* Glas-overlay */
 .contact-card__glass {
-    margin: var(--space-m);
-    padding:2.2rem var(--space-m);
-    border-radius: calc(var(--radius) + 2px);
-    background: rgba(255, 255, 255, 0.637);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 2px solid rgba(0, 0, 0, 0.363);
-    color: var(--skiffer);
+  margin: var(--space-m);
+  padding: 2.2rem var(--space-m);
+  border-radius: calc(var(--radius) + 2px);
+  background: rgba(255, 255, 255, 0.64);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: var(--skiffer);
+  width: calc(100% - (2 * var(--space-m)));
+  max-width: 100%;
 }
 
 /* Fallback om blur inte stöds */
 @supports not (backdrop-filter: blur(10px)) {
-    .contact-card__glass {
-        background: rgba(255, 255, 255, 0.753);
-        border-color: rgba(0, 0, 0, 0.06);
-    }
+  .contact-card__glass {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(0, 0, 0, 0.06);
+  }
 }
 
 /* Typografi */
 .contact-card__glass h3 {
-    margin: 0 0 .3rem;
-    font-family: var(--font-heading);
-    color: var(--mossa);
-    font-size: 1.15rem;
+  margin: 0 0 0.3rem;
+  font-family: var(--font-heading);
+  color: var(--mossa);
+  font-size: 1.15rem;
 }
 
 .contact-card__glass p {
-    margin: 0 0 .9rem;
-    font-family: var(--font-main);
+  margin: 0 0 0.9rem;
+  font-family: var(--font-main);
+  line-height: 1.5;
 }
 
 /* Knappar */
 .btn {
-    display: inline-block;
-    text-decoration: none;
-    font-family: var(--font-main);
-    font-weight: 700;
-    border-radius: var(--radius);
-    padding: 0.7rem 1.1rem;
-    transition: background-color .2s ease, color .2s ease, transform .1s ease, border-color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-weight: 700;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
 }
 
-
 .btn--primary {
-    background: var(--glod);
-    color: var(--bjork);
+  background: var(--glod);
+  color: var(--bjork);
 }
 
 .btn--primary:hover {
-    background: var(--mossa);
+  background: var(--mossa);
 }
 
 .btn--secondary {
-    background: var(--mossa);
-    color: var(--bjork);
+  background: var(--mossa);
+  color: var(--bjork);
 }
 
 .btn--secondary:hover {
-    background: var(--glod);
+  background: var(--glod);
 }
-
 
 /* Serviceområde */
 .contact__service {
-    margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 .contact__service h2 {
-    font-family: var(--font-heading);
-    color: var(--mossa);
-    margin: 0 0 .6rem;
+  font-family: var(--font-heading);
+  color: var(--mossa);
+  margin: 0 0 0.6rem;
 }
 
 .muted {
-    opacity: .85;
-    font-size: .95rem;
+  opacity: 0.85;
+  font-size: 0.95rem;
 }
 
 .contact__partner {
@@ -183,52 +200,62 @@
 
 /* FAQ */
 .contact__faq h2 {
-    font-family: var(--font-heading);
-    color: var(--mossa);
-    margin: 0 0 .6rem;
+  font-family: var(--font-heading);
+  color: var(--mossa);
+  margin: 0 0 0.6rem;
 }
 
 .contact__faq details {
-    background: #fff;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    padding: .9rem 1rem;
-    margin-bottom: .6rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .contact__faq summary {
-    cursor: pointer;
-    font-weight: 600;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .contact__faq p {
-    margin: .5rem 0 0;
+  margin: 0.5rem 0 0;
 }
 
-/* Mobiljusteringar */
+/* Tablet */
 @media (max-width: 768px) {
-    .contact__header h1 {
-        font-size: 1.9rem;
-    }
+  .contact__header h1 {
+    font-size: 1.9rem;
+  }
 
-    .contact__lead {
-        font-size: 1rem;
-    }
+  .contact__lead {
+    font-size: 1rem;
+  }
 
-    .btn {
-        width: 50%;
-        text-align: center;
-    }
+  .btn {
+    width: 100%;
+  }
 }
 
+/* Mobil */
 @media (max-width: 480px) {
-    .contact-card__glass {
-        margin: var(--space-s);
-        padding: var(--space-m);
-    }
+  .contact {
+    padding: var(--space-l) var(--space-s);
+  }
 
-    .btn {
-        width: 50%;
-        text-align: center;
-    }
+  .contact__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card__glass {
+    margin: var(--space-s);
+    padding: var(--space-m);
+    width: calc(100% - (2 * var(--space-s)));
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
 }
