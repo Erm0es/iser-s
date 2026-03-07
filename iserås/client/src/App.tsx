@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/contactPage/ContactPage";
 import AboutPage from "./pages/aboutPage/AboutPage";
+import ServicesPage from "./pages/servicesPage/ServicesPage";
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="kontakt" element={<ContactPage />} />
           <Route path="om-oss" element={<AboutPage />} />
+          <Route path="tjanster" element={<ServicesPage />} />
         </Routes>
       </main>
       <Footer />
