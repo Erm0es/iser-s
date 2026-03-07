@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__overlay">
         <div className="hero__content">
-          <h1>Kamininstallation och skorstensrenovering för trygga hem</h1>
+          <h1>Kamininstallation och skorstensrenovering i Göteborg</h1>
           <p>
             Vi hjälper dig skapa värme i hemmet — säkert, snyggt och hållbart.
           </p>

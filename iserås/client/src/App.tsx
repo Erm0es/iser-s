@@ -7,6 +7,7 @@ import ContactPage from "./pages/contactPage/ContactPage";
 import AboutPage from "./pages/aboutPage/AboutPage";
 import ServicesPage from "./pages/servicesPage/ServicesPage";
 import GalleryPage from "./pages/galleryPage/GalleryPage";
+import ScrollTopButton from "./components/scrollTopButton/ScrollTopButton";
 
 
 export default function App() {
@@ -21,9 +22,9 @@ export default function App() {
           <Route path="om-oss" element={<AboutPage />} />
           <Route path="tjanster" element={<ServicesPage />} />
           <Route path="galleri" element={<GalleryPage />} />
-
         </Routes>
       </main>
+      <ScrollTopButton />
       <Footer />
     </>
   );

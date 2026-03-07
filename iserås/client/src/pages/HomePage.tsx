@@ -10,13 +10,15 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>
-          Iserås Kamin & Skorsten | Installation av kaminer & renovering av skorsten
+          Iserås Kamin & Skorsten | Kamininstallation i Göteborg & Västra Götaland
         </title>
 
         <meta
           name="description"
-          content="Iserås Kamin & Skorsten hjälper dig med installation av kaminer, renovering av skorstenar och rådgivning för trygga och hållbara eldstadslösningar."
+          content="Iserås Kamin & Skorsten hjälper dig med kamininstallation, renovering av skorstenar och rådgivning i Göteborg och Västra Götaland. Tryggt hantverk från planering till färdig installation."
         />
+
+        <meta name="robots" content="index, follow" />
 
         <script type="application/ld+json">
           {`
@@ -24,10 +26,17 @@ export default function HomePage() {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Iserås Kamin & Skorsten",
-  "url": "https://iserås.se",
-  "description": "Installation av kaminer, renovering av skorstenar och rådgivning kring eldstäder. I västra götaland, Göteborg. ",
-  "telephone": "+460707444467",
-  "areaServed": "Göteborg",
+  "url": "https://iseras.se",
+  "description": "Installation av kaminer, renovering av skorstenar och rådgivning kring eldstäder i Göteborg och Västra Götaland.",
+  "telephone": "+46707444467",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Västra Götaland"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "SE"
+  },
   "serviceType": [
     "Kamininstallation",
     "Renovering av skorsten",

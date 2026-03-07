@@ -1,0 +1,35 @@
+.scrollTop {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: var(--glod);
+  color: var(--bjork);
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1000;
+}
+
+.scrollTop--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scrollTop:hover {
+  background: var(--mossa);
+}
