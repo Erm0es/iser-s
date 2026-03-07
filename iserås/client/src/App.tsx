@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import HomePage from "./pages/HomePage";
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

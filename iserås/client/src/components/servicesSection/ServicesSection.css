@@ -54,11 +54,16 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .services__card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.services__card:active {
+  transform: scale(0.98);
 }
 
 /* === IMAGE === */
@@ -75,19 +80,20 @@
   filter: brightness(0.9);
   transform: scale(1.05);
 }
+
 .services__card:hover .services__content {
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
 
 /* === CONTENT === */
 .services__content {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.35);        
-  backdrop-filter: blur(8px);              
-  -webkit-backdrop-filter: blur(8px);  
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: 100%;
   padding: 1.2rem;
   border-radius: 0 0 16px 16px;
@@ -109,6 +115,13 @@
   color: color-mix(in srgb, var(--bjork), white 30%);
 }
 
+/* === LINK ROW === */
+.services__linkRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 /* === LINK === */
 .services__link {
   font-family: "Inter", sans-serif;
@@ -119,6 +132,18 @@
   transition: color 0.2s ease;
 }
 
-.services__link:hover {
+.services__arrow {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--bjork);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.services__card:hover .services__link,
+.services__card:hover .services__arrow {
   color: var(--glod);
+}
+
+.services__card:hover .services__arrow {
+  transform: translateX(4px);
 }
