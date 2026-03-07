@@ -63,3 +63,24 @@
   background-color: var(--mossa);
   transform: translateY(-2px);
 }
+
+@media (max-width: 900px) {
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero__content {
+    max-width: 500px;
+    padding: var(--space-m);
+  }
+
+  .hero__content h1 {
+    font-size: 2rem;
+  }
+
+  .hero__content p {
+    font-size: 1rem;
+  }
+
+}

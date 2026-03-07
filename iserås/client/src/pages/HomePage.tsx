@@ -25,7 +25,7 @@ export default function HomePage() {
   "@type": "LocalBusiness",
   "name": "Iserås Kamin & Skorsten",
   "url": "https://iserås.se",
-  "description": "Installation av kaminer, renovering av skorstenar och rådgivning kring eldstäder.",
+  "description": "Installation av kaminer, renovering av skorstenar och rådgivning kring eldstäder. I västra götaland, Göteborg. ",
   "telephone": "+460707444467",
   "areaServed": "Göteborg",
   "serviceType": [
