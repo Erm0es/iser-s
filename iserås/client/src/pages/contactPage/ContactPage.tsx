@@ -1,6 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import "./ContactPage.css";
 
 export default function ContactPage() {
+  <Helmet>
+<title>Kontakt | Iserås Kamin & Skorsten</title>
+<meta
+  name="description"
+  content="Kontakta Iserås Kamin & Skorsten för rådgivning, installation av kamin eller renovering av skorsten."
+/>
+</Helmet>
   return (
     <section className="contact" aria-labelledby="contact-title">
       <div className="contact__inner">

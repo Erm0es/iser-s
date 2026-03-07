@@ -18,7 +18,6 @@ export default function Header() {
         {/* 👇 Ny wrapper som staplar logga + partnerlänk */}
         <div className="header__brand">
           <Link to="/" className="header__logo">
-            <div className="header__logo-mark" />
             <span>Iserås Kamin & Skorsten</span>
           </Link>
 
@@ -38,7 +37,7 @@ export default function Header() {
           <NavLink to="/tjanster">Tjänster</NavLink>
           <NavLink to="/galleri">Galleri</NavLink>
           <NavLink to="/kontakt">Kontakt</NavLink>
-          <a href="tel:+4670XXXXXXX" className="nav__cta">Ring oss</a>
+          <a href="tel:+46707444467" className="nav__cta">Ring oss</a>
         </nav>
 
         <button

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import "./servicesPage.css";
 
 const services = [
@@ -56,12 +57,19 @@ const steps = [
 ];
 
 export default function ServicesPage() {
+    <Helmet>
+        <title>Tjänster | Kamininstallation och renovering av skorsten</title>
+        <meta
+            name="description"
+            content="Läs mer om våra tjänster inom installation av kaminer, renovering av skorstenar, besiktning och rådgivning."
+        />
+    </Helmet>
     return (
         <main className="servicesPage">
             <section className="servicesPage__hero">
                 <div className="servicesPage__container">
                     <p className="servicesPage__eyebrow">Våra tjänster</p>
-                    <h1 className="servicesPage__title">Trygga lösningar för kamin och skorsten</h1>
+                    <h1 className="servicesPage__title">Kamininstallation och renovering av skorsten</h1>
                     <p className="servicesPage__lead">
                         Vi hjälper dig med installation, renovering, service och rådgivning
                         för att skapa hållbara och trivsamma eldstadslösningar i hemmet.

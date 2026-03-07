@@ -16,7 +16,7 @@ export default function ContactCTA({ withForm = false }: ContactCTAProps) {
             <a href="/kontakt" className="contact-cta__button">Kontakta oss</a>
 
             <ul className="contact-cta__info">
-              <li><a href="tel:+4670XXXXXXX">070-XXX XX XX</a></li>
+              <li><a href="tel:+46707444467">0707-444467</a></li>
               <li><a href="mailto:info@eldstad.nu">info@eldstad.nu</a></li>
               <li>Iserås, Västra Götaland</li>
             </ul>

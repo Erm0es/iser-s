@@ -11,14 +11,14 @@ export default function Footer() {
 
         <div className="footer__contact">
           <h4>Kontakt</h4>
-          <p>📞 070-123 45 67</p>
+          <p>📞 0707-444467</p>
           <p>✉️ info@eldstad.nu</p>
-          <p>📍 Iserås, Västra Götaland</p>
+          <p>📍 Göteborg, Västra Götaland</p>
         </div>
       </div>
 
       <div className="footer__bottom">
-        <p>© 2025 Iserås Skorsten & Kamin. All rights reserved.</p>
+        <p>© 2026 Iserås Skorsten & Kamin. All rights reserved.</p>
       </div>
     </footer>
   );

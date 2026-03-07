@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import "./galleryPage.css";
 
@@ -20,8 +21,14 @@ const galleryImages: GalleryImage[] = [
 ];
 
 export default function GalleryPage() {
+  <Helmet>
+    <title>Galleri | Kamininstallationer och eldstäder</title>
+    <meta
+      name="description"
+      content="Se bilder från våra kamininstallationer, renoverade skorstenar och inspirerande eldstadsmiljöer."
+    />
+  </Helmet>
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-
   return (
     <main className="galleryPage">
       <section className="galleryPage__hero">

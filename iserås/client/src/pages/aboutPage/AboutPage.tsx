@@ -1,6 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import "./AboutPage.css";
 
 export default function AboutPage() {
+  <Helmet>
+    <title>Om Iserås Kamin & Skorsten</title>
+    <meta
+      name="description"
+      content="Lär känna Iserås Kamin & Skorsten och vårt arbete med installation av kaminer och renovering av skorstenar."
+    />
+  </Helmet>
   return (
     <main className="about">
       <section className="about__hero">
