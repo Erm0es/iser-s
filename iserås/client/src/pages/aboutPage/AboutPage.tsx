@@ -8,7 +8,7 @@ export default function AboutPage() {
           <p className="about__eyebrow">Om Iserås</p>
           <h1 className="about__title">Värme, trygghet och hantverk</h1>
           <p className="about__lead">
-            På Iserås Skorsten & Kamin arbetar vi med installation, renovering
+            Vi på Iserås Skorsten & Kamin arbetar med installation, renovering
             och rådgivning för att skapa trygga och hållbara lösningar för
             hemmet. För oss handlar det inte bara om funktion, utan också om
             känslan av värme, trivsel och kvalitet.
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <div className="about__container">
           <div className="about__sectionIntro">
             <p className="about__eyebrow">Det som är viktigt för oss</p>
-            <h2 className="about__sectionTitle">Så vill vi att det ska kännas att anlita Iserås</h2>
+            <h2 className="about__sectionTitle">Så vill vi att det ska kännas för dig att anlita Iserås!</h2>
           </div>
 
           <div className="about__cards">

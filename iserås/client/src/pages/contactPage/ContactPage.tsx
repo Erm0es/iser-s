@@ -19,7 +19,7 @@ export default function ContactPage() {
           {/* CALL */}
           <article className="contact-card call-card">
             <div className="contact-card__glass">
-              <h3>Ring oss</h3>
+              <h3>Skicka ett Sms</h3>
               <p>För snabbast svar skicka ett <strong>sms.</strong></p>
               <a className="btn btn--primary" href="tel:+46707444467">0707-44 44 67</a>
             </div>
