@@ -9,15 +9,15 @@ type GalleryImage = {
 
 const galleryImages: GalleryImage[] = [
   { src: "/images/gallery/kamin-1.jpg", alt: "Kamin i vardagsrum" },
-  { src: "/images/gallery/kamin-2.jpg", alt: "Modern kamin" },
-  { src: "/images/gallery/kamin-3.jpg", alt: "Kaminhörna i hem" },
-  { src: "/images/gallery/kamin-4.jpg", alt: "Renoverad skorsten" },
-  { src: "/images/gallery/kamin-5.jpg", alt: "Kamininstallation" },
-  { src: "/images/gallery/kamin-6.jpg", alt: "Detaljbild eldstad" },
-  { src: "/images/gallery/kamin-7.jpg", alt: "Kamin i interiör" },
-  { src: "/images/gallery/kamin-8.jpg", alt: "Varm kaminmiljö" },
-  { src: "/images/gallery/kamin-9.jpg", alt: "Skorsten med utsikt" },
-  { src: "/images/gallery/kamin-10.jpg", alt: "Putsad kamin" },
+  { src: "/images/gallery/kamin-2.jpg", alt: "Murad kamin" },
+  { src: "/images/gallery/kamin-3.jpg", alt: "Standard takhuv" },
+  { src: "/images/gallery/kamin-4.jpg", alt: "Insats i tegelvägg" },
+  { src: "/images/gallery/kamin-5.jpg", alt: "Hörn installation" },
+  { src: "/images/gallery/kamin-6.jpg", alt: "Kakelugn" },
+  { src: "/images/gallery/kamin-7.jpg", alt: "Mys framför brasan" },
+  { src: "/images/gallery/kamin-8.jpg", alt: "Designer kamin" },
+  { src: "/images/gallery/kamin-9.jpg", alt: "Rund huv i blandad färg" },
+  { src: "/images/gallery/kamin-10.jpg", alt: "Vit kamin" },
 ];
 
 export default function GalleryPage() {
