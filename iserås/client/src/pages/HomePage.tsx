@@ -9,13 +9,35 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Iserås Kamin & Skorsten | Installation av kaminer & renovering av skorstenar</title>
+        <title>
+          Iserås Kamin & Skorsten | Installation av kaminer & renovering av skorsten
+        </title>
+
         <meta
           name="description"
           content="Iserås Kamin & Skorsten hjälper dig med installation av kaminer, renovering av skorstenar och rådgivning för trygga och hållbara eldstadslösningar."
         />
-        <link rel="canonical" href="https://iserås.se/" />
+
+        <script type="application/ld+json">
+          {`
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Iserås Kamin & Skorsten",
+  "url": "https://iserås.se",
+  "description": "Installation av kaminer, renovering av skorstenar och rådgivning kring eldstäder.",
+  "telephone": "+460707444467",
+  "areaServed": "Göteborg",
+  "serviceType": [
+    "Kamininstallation",
+    "Renovering av skorsten",
+    "Rådgivning om eldstäder"
+  ]
+}
+`}
+        </script>
       </Helmet>
+
       <Hero />
       <ServicesSection />
       <AboutSection />
