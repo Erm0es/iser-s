@@ -3,6 +3,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/contactPage/ContactPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+
 
 export default function App() {
   return (
@@ -12,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="kontakt" element={<ContactPage />} />
+          <Route path="om-oss" element={<AboutPage />} />
         </Routes>
       </main>
       <Footer />

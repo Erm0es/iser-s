@@ -1,12 +1,23 @@
 /* ===== GLOBAL RESET ===== */
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bjork);
-  font-family: var(--font-main);
+html {
+  box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
 #root {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }
